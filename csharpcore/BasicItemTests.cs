@@ -81,5 +81,22 @@ namespace csharpcore
 
             Assert.Equal(0, item.Quality);
         }
+        
+        [Fact]
+        public void GivenABasicItemWithAnInitialQualityAbove50__WhenADayPasses__ThenTheQualityDecreasesByOne()
+        {
+            var item = new Item
+            {
+                Name = "Our cool basic item",
+                SellIn = 10,
+                Quality = 55,
+            };
+            var items = new List<Item> { item };
+            var app = new GildedRose(items);
+
+            app.UpdateQuality();
+
+            Assert.Equal(54, item.Quality);
+        }
     }
 }
