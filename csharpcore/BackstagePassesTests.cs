@@ -102,7 +102,7 @@ namespace csharpcore
 
             app.UpdateQuality();
 
-            Assert.Equal(54, item.Quality);
+            Assert.Equal(55, item.Quality);
         }
     }
     

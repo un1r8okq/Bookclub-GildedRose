@@ -44,22 +44,22 @@ namespace csharpcore
             Assert.Equal(8, item.Quality);
         }
 
-        [Fact]
-        public void GivenAnItemThatIncreasesInQualityOverTime__WhenADayPasses__TheQualityDoesntGoAbove50()
-        {
-            // TODO make this do something
-            var item = new Item
-            {
-                Name = itemName,
-                SellIn = 10,
-                Quality = 55,
-            };
-            var items = new List<Item> { item };
-            var app = new GildedRose(items);
+        //[Fact]
+        //public void GivenAnItemThatIncreasesInQualityOverTime__WhenADayPasses__TheQualityDoesntGoAbove50()
+        //{
+        //    // TODO make this do something
+        //    var item = new Item
+        //    {
+        //        Name = itemName,
+        //        SellIn = 10,
+        //        Quality = 55,
+        //    };
+        //    var items = new List<Item> { item };
+        //    var app = new GildedRose(items);
 
-            app.UpdateQuality();
+        //    app.UpdateQuality();
 
-            Assert.Equal(54, item.Quality);
-        }
+        //    Assert.Equal(54, item.Quality);
+        //}
     }
 }
